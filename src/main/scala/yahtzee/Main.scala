@@ -10,11 +10,9 @@ object Main extends App {
       state
     } else {
       if (!state.hasRolled) {
-        // Start of round - must roll
-        UI.displayGame(state)
-        println("Press Enter to roll dice...")
-        StdIn.readLine()
-        playerTurn(state.rollDice)
+        // Start of round - roll automatically and display result
+        val rolledState = state.rollDice
+        playerTurn(rolledState)
       } else {
         // Mid-round - have rolled, now choose to reroll or score
         UI.displayGame(state)

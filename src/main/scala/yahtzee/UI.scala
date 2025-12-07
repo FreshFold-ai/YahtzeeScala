@@ -12,7 +12,7 @@ object UI {
     clearScreen()
     val playerInfo = if (playerName.nonEmpty) s" - $playerName" else ""
     println("╔════════════════════════════════════════╗")
-    println("║         YAHTZEE - ROUND " + f"${state.round}%2d" + playerInfo.padTo(8, ' ') + "║")
+    println("║         YAHTZEE - ROUND " + f"${state.round}%2d" + playerInfo.padTo(8, ' ') + "     ║")
     println("╚════════════════════════════════════════╝")
     println()
     
